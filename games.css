@@ -1,0 +1,119 @@
+body {
+    display: grid;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #0a0374, #2c2b2b);
+}
+
+.cabeçalho {
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+    margin: 5px;
+    height: 30PX;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.main-content {
+    flex: 4;
+    padding: 0%;
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.form-games {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    width: 140px;
+    height: 190px;
+    perspective: 1000px;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s linear;
+    background-image: url(deepweb.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.front {
+    background-color: #333;
+    transform: rotateY(0deg);
+}
+
+.back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+#tempo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+    height: 30PX;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.tempo {
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+.mensagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background-color: #333;
+    color: wheat;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#player-name {
+    gap: 5px;
+    color: aliceblue;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    position: absolute;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    align-items: center;
+}
